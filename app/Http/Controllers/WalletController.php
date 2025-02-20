@@ -144,7 +144,7 @@ class WalletController extends Controller
             'description' => 'Received from user ' . $sender->name,
         ]);
 
-        return response()->json(['message' => 'Funds transferred successfully to recipient', 'sender_balance' => $senderWallet->balance, 'recipient_balance' => $recipientWallet->balance], 200);
+        return response()->json(['message' => 'Funds transferred successfully', 'sender_balance' => $senderWallet->balance], 200);
     }
 
     public function transactionHistory()
